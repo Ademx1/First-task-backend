@@ -1,0 +1,18 @@
+﻿@using backtask.Models
+@{
+    List<Product> products = (List<Product>)ViewData["Products"];
+    }
+
+
+<body>
+    <h2>
+        Products count: @products.Count
+    </h2>
+    <ul>
+        @foreach (var prod in products)
+         {
+          <li>@prod.ProductName - Id:@prod.Id</li>
+         }
+        
+    </ul>
+</body>
